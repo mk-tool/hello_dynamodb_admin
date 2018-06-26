@@ -6,7 +6,7 @@ table = client.create_table(
     TableName='Movies',
     KeySchema=[
         {
-            'AttributeName': 'year',
+            'AttributeName': 'id',
             'KeyType': 'HASH'  #Partition key
         },
         {
@@ -16,14 +16,13 @@ table = client.create_table(
     ],
     AttributeDefinitions=[
         {
-            'AttributeName': 'year',
+            'AttributeName': 'id',
             'AttributeType': 'N'
         },
         {
             'AttributeName': 'title',
             'AttributeType': 'S'
         },
-
     ],
     ProvisionedThroughput={
         'ReadCapacityUnits': 10,

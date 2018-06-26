@@ -1,1 +1,0 @@
-# hello_dynamodb_admin
